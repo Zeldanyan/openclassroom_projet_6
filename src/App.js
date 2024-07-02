@@ -1,9 +1,9 @@
-//import logo from './logo.svg';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home';
 import About from './pages/About';
 import Fiche from './pages/Fiche';
+import Error404 from './pages/Error404';
 
 /*function App() {
   return (
@@ -31,6 +31,7 @@ function App() {
     <Router>
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='*' element={<Error404 />} />
         <Route path='/about' element={<About />} />
         <Route path='/fiche' element={<Fiche />} />
       </Routes>
