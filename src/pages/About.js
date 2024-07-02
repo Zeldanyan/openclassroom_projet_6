@@ -1,9 +1,17 @@
 import React from 'react';
+import Banner from '../components/Banner';
+import Footer from '../components/Footer';
 
 const About = () => {
     return (
         <div>
-            <h1>A propos</h1>
+            <div>
+                <Banner />
+                <main>
+
+                </main>
+                <Footer />
+            </div>
         </div>
     );
 };
