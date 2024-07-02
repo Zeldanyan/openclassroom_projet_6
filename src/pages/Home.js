@@ -13,7 +13,11 @@ const Home = () => {
                 </div>
                 <div className='Gallery'>
                     <Card />
-                    <p>test</p>
+                    <Card />
+                    <Card />
+                    <Card />
+                    <Card />
+                    <Card />
                 </div>
             </main>
             <Footer />

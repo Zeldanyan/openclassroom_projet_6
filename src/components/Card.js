@@ -2,8 +2,8 @@ import React from 'react';
 
 const Card = () => {
     return (
-        <div>
-
+        <div className='card'>
+            <p>Titre de Location</p>
         </div>
     );
 };

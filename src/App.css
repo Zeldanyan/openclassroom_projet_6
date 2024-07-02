@@ -4,6 +4,11 @@ body {
   font-size: 24px;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 header {
   margin: 50px 5% 50px 5%;
   display: inline-flex;
@@ -27,13 +32,12 @@ header {
   text-decoration: underline;
 }
 
-.Home {
-  margin: 50px 5% 50px 5%;
-  gap: 50px;
+Main {
+  margin: 0 5% 50px 5%;
 }
 
 .Home .Section {
-  background-image: url("./images/section.png");
+  background-image: url("./images/sectionHome.png");
   background-color: rgba(0, 0, 0, 0.6);
   background-blend-mode: darken;
   background-size: cover;
@@ -41,6 +45,11 @@ header {
   background-position-y: center;
   color: white;
   border-radius: 25px;
+  margin-bottom: 50px;
+  height: 223px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .Home .Section h1 {
@@ -55,6 +64,42 @@ header {
 .Home .Gallery {
   background-color: #F6F6F6;
   border-radius: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.About .Section {
+  background-image: url("./images/sectionAbout.png");
+  background-color: rgba(0, 0, 0, 0.3);
+  background-blend-mode: darken;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  color: white;
+  border-radius: 25px;
+  margin-bottom: 50px;
+  height: 223px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  height: 340px;
+  width: 340px;
+  background-color: #FF6060;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-end;
+  margin: 20px;
+}
+
+.card p {
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  margin: 20px;
 }
 
 footer {
