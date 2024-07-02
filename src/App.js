@@ -1,7 +1,11 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
+import Home from './pages/Home';
+import About from './pages/About';
+import Fiche from './pages/Fiche';
 
-function App() {
+/*function App() {
   return (
     <div className="App">
       <header className="App-header">
@@ -19,6 +23,18 @@ function App() {
         </a>
       </header>
     </div>
+  );
+}*/
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/fiche' element={<Fiche />} />
+      </Routes>
+    </Router>
   );
 }
 
