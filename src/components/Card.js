@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Card = () => {
+const Card = ({ loge }) => {
     return (
         <div className='card'>
-            <p>Titre de Location</p>
+            <p>{loge.title}</p>
         </div>
     );
 };
