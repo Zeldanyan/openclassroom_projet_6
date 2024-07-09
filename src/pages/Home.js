@@ -1,22 +1,22 @@
 import React, { useEffect, useState } from 'react';
-import Banner from '../components/Banner';
+import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Card from '../components/Card';
-import axios from 'axios';
 
 const Home = () => {
 
     const [data, setData] = useState([]);
     useEffect(() => {
-        axios
-            .get("/logements.json")
-            .then((res) => setData(res.data));
+        fetch('/logements.json')
+            .then(response => response.json())
+            .then(res => setData(res))
+            .catch(error => console.error('Error data:', error));
     }, []);
     console.log(data);
 
     return (
         <div>
-            <Banner />
+            <Header />
             <main className='Home'>
                 <div className='Section'>
                     <h1>Chez vous, partout et ailleurs</h1>
