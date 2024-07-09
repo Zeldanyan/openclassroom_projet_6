@@ -1,11 +1,15 @@
 import React from 'react';
 import './Card.scss';
+import { Link } from 'react-router-dom';
 
 const Card = ({ loge }) => {
     return (
-        <div className='card'>
-            <p>{loge.title}</p>
-        </div>
+        <figure className='card'>
+            <Link to={`/fiche-logement/${loge.id}`}>
+                <img className='cardimg' src={loge.cover} alt="Kasa" />
+                <p>{loge.title}</p>
+            </Link>
+        </figure>
     );
 };
 
