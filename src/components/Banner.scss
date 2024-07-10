@@ -1,0 +1,24 @@
+.Banner {
+    // background-image: url("");
+    // background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: darken;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    color: white;
+    border-radius: 25px;
+    margin-bottom: 50px;
+    height: 223px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+        padding: 80px 0;
+        margin: 0;
+        text-align: center;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+        font-weight: 700;
+        font-size: 48px;
+    }
+}
