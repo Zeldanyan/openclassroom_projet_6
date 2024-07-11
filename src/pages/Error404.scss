@@ -1,0 +1,27 @@
+$color-red: #FF6060;
+
+.e404 {
+    text-align: center;
+
+    h1 {
+        font-size: 288px;
+        margin: 0;
+        font-weight: 700;
+        color: $color-red;
+    }
+
+    p {
+        font-size: 36px;
+        font-weight: 500;
+        margin: 100px 0;
+        color: $color-red;
+    }
+
+    a {
+        display: block;
+        font-size: 18px;
+        font-weight: 500;
+        margin: 100px 0;
+        text-decoration: underline;
+    }
+}
