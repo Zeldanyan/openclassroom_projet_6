@@ -12,9 +12,9 @@ const Collapse = (props) => {
 
     return (
         <div className='Collapse'>
-            <div className='title' onClick={toggle}>
+            <div className='title'>
                 <p>{props.title}</p>
-                <img src={open ? collOpen : collClose} alt="fleche" />
+                <img src={open ? collOpen : collClose} alt="fleche" onClick={toggle} />
             </div>
             <p className='text' style={open ? {} : { display: 'none' }}>{props.text}</p>
         </div >
