@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Card = ({ loge }) => {
     return (
         <figure className='card'>
-            <Link to={`/fiche-logement/${loge.id}`}>
+            <Link to={`/logement/${loge.id}`}>
                 <img className='cardimg' src={loge.cover} alt="Kasa" />
                 <p>{loge.title}</p>
             </Link>

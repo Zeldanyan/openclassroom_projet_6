@@ -14,7 +14,6 @@ const Home = () => {
             .then(res => setData(res))
             .catch(error => console.error('Error data:', error));
     }, []);
-    console.log(data);
 
     return (
         <div>

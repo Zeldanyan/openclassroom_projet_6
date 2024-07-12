@@ -2,7 +2,6 @@ import React from 'react';
 import './Banner.scss';
 
 const Banner = (props) => {
-    console.log(props);
 
     return (
         <div className='Banner'
