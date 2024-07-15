@@ -1,0 +1,55 @@
+$color-red: #FF6060;
+
+.Logement {
+
+    .Info1 {
+        display: flex;
+        justify-content: space-between;
+
+        .titleID {
+
+            h1 {
+                font-size: 36px;
+                font-weight: 500;
+                color: $color-red;
+                margin: 0;
+            }
+
+            p {
+                margin: 0;
+                font-size: 18px;
+                font-weight: 500;
+                color: black;
+            }
+        }
+
+        .host {
+            display: flex;
+
+            p {
+                font-size: 18px;
+                font-weight: 500;
+                color: $color-red;
+                margin: 10px;
+            }
+
+            img {
+                height: 64px;
+                border-radius: 100%;
+            }
+        }
+    }
+
+    .InfoTag {
+        margin: 20px 0;
+    }
+
+    .LogementCollapses {
+        display: flex;
+        justify-content: space-between;
+
+        .Collapse {
+            width: 47.5%;
+        }
+    }
+}
