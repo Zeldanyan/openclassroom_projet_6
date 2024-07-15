@@ -1,56 +1,61 @@
 import React, { useEffect, useState } from 'react';
 import './Logement.scss';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import Slideshow from '../components/Slideshow';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Collapse from '../components/Collapse';
+import star1 from './../images/star_true.svg';
+import star0 from './../images/star_false.svg';
+import Error404 from './Error404';
 
 const Logement = () => {
     const { id } = useParams();
     const [dataID, setDataID] = useState([]);
-    const nav = useNavigate();
 
     useEffect(() => {
         fetch('/logements.json')
             .then(response => response.json())
             .then(res => setDataID(res.find(nyan => nyan.id === id)))
             .catch(error => console.error('Error data:', error));
-        if (!dataID) {
-            nav('/404');
-            console.log("404");
-        }
-    }, [id, nav, dataID]);
+    }, [id]);
 
     if (!dataID) {
-        return (nav('/404'));
+        return (<Error404 />);
     }
-
-    console.log(dataID);
 
     return (
         <div>
             <Header />
-            <main className='Logement'>
-                <Slideshow />
+            {dataID?.id && (<main className='Logement'>
+                <Slideshow IMGs={dataID.pictures} />
                 <div className='Info1'>
                     <div className='titleID'>
                         <h1>{dataID.title}</h1>
                         <p>{dataID.location}</p>
                     </div>
                     <div className='host'>
-                        {/* <p>{dataID.host.name}</p>
-                        <img src={dataID.host.picture} alt={"photo de" + dataID.host.name} /> */}
+                        <div className='hostname'>
+                            <p>{dataID.host.name.split(' ')[0]}</p>
+                            <p>{dataID.host.name.split(' ')[1]}</p>
+                        </div>
+                        <img src={dataID.host.picture} alt={"photo de" + dataID.host.name} />
                     </div>
                 </div>
                 <div className='InfoTag'>
                     <div className='tags'>
                         <ul>
-
+                            {dataID.tags.map((tag_) => (
+                                <li key={tag_}>{tag_}</li>
+                            ))}
                         </ul>
                     </div>
                     <div className='stars'>
-
+                        <img src={dataID.rating >= 1 ? star1 : star0} alt={dataID.rating + "/5 étoiles"} />
+                        <img src={dataID.rating >= 2 ? star1 : star0} alt={dataID.rating + "/5 étoiles"} />
+                        <img src={dataID.rating >= 3 ? star1 : star0} alt={dataID.rating + "/5 étoiles"} />
+                        <img src={dataID.rating >= 4 ? star1 : star0} alt={dataID.rating + "/5 étoiles"} />
+                        <img src={dataID.rating >= 5 ? star1 : star0} alt={dataID.rating + "/5 étoiles"} />
                     </div>
                 </div>
                 <div className='LogementCollapses'>
@@ -59,9 +64,10 @@ const Logement = () => {
                         text={dataID.description} />
                     <Collapse
                         title={'Équipements'}
-                        text={dataID.equipments} />
+                        text={dataID.equipments}
+                        list={true} />
                 </div>
-            </main>
+            </main>)}
             <Footer />
         </div>
     );

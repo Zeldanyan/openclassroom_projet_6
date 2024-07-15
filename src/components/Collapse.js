@@ -16,7 +16,11 @@ const Collapse = (props) => {
                 <p>{props.title}</p>
                 <img src={open ? collOpen : collClose} alt="fleche" onClick={toggle} />
             </div>
-            <p className='text' style={open ? {} : { display: 'none' }}>{props.text}</p>
+            <div className='text' style={open ? {} : { display: 'none' }}>
+                {props.list ?
+                    props.text.map((item) => <p key={item}>{item}</p>) :
+                    <p >{props.text}</p>}
+            </div>
         </div >
     );
 };

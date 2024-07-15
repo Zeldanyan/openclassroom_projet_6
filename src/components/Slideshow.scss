@@ -1,0 +1,34 @@
+.Slideshow {
+
+    .pictures {
+        width: 100%;
+        height: 100%;
+        border-radius: 25px;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    .prev {
+        top: 350px;
+        left: calc(5% + 23px);
+        cursor: pointer;
+        position: absolute;
+    }
+
+    .next {
+        top: 350px;
+        right: calc(5% + 23px);
+        cursor: pointer;
+        position: absolute;
+    }
+
+    .counter {
+        top: 546px;
+        left: 50%;
+        text-align: center;
+        font-weight: 500;
+        color: rgb(255, 255, 255);
+        font-size: 18px;
+        position: absolute;
+    }
+}

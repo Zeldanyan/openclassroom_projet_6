@@ -2,6 +2,11 @@ $color-red: #FF6060;
 
 .Logement {
 
+    .Slideshow {
+        height: 415px;
+        margin: 0 0 24px 0;
+    }
+
     .Info1 {
         display: flex;
         justify-content: space-between;
@@ -26,12 +31,21 @@ $color-red: #FF6060;
         .host {
             display: flex;
 
-            p {
-                font-size: 18px;
-                font-weight: 500;
-                color: $color-red;
-                margin: 10px;
+            .hostname {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                p {
+                    font-size: 18px;
+                    font-weight: 500;
+                    color: $color-red;
+                    margin: 0 10px;
+                    text-align: right;
+                }
             }
+
+
 
             img {
                 height: 64px;
@@ -42,6 +56,34 @@ $color-red: #FF6060;
 
     .InfoTag {
         margin: 20px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .tags ul {
+            display: flex;
+            margin: 0;
+            gap: 10px;
+            padding: 0;
+
+            li {
+                display: block;
+                width: 115px;
+                padding: 3px 0;
+                font-weight: 700;
+                font-size: 14px;
+                color: white;
+                background-color: $color-red;
+                border-radius: 10px;
+                text-align: center;
+            }
+        }
+
+        .stars {
+            img {
+                margin: 0 4px;
+            }
+        }
     }
 
     .LogementCollapses {
