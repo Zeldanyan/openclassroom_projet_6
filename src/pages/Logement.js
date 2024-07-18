@@ -56,7 +56,15 @@ const Logement = () => {
                         <img src={dataID.rating >= 3 ? star1 : star0} alt={dataID.rating + "/5 étoiles"} />
                         <img src={dataID.rating >= 4 ? star1 : star0} alt={dataID.rating + "/5 étoiles"} />
                         <img src={dataID.rating >= 5 ? star1 : star0} alt={dataID.rating + "/5 étoiles"} />
+                        <div className='host'>
+                            <div className='hostname'>
+                                <p>{dataID.host.name.split(' ')[0]}</p>
+                                <p>{dataID.host.name.split(' ')[1]}</p>
+                            </div>
+                            <img src={dataID.host.picture} alt={"photo de" + dataID.host.name} />
+                        </div>
                     </div>
+
                 </div>
                 <div className='LogementCollapses'>
                     <Collapse

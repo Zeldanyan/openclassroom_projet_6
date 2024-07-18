@@ -32,3 +32,26 @@
         position: absolute;
     }
 }
+
+@media (max-width: 480px) {
+    .Slideshow {
+        .prev {
+            top: 225px;
+            left: 25px;
+            height: 20px;
+            width: 12px;
+        }
+
+        .next {
+            top: 225px;
+            right: 25px;
+            height: 20px;
+            width: 12px;
+        }
+
+        .counter {
+            top: 320px;
+            display: none;
+        }
+    }
+}

@@ -27,30 +27,29 @@ $color-red: #FF6060;
                 color: black;
             }
         }
+    }
 
-        .host {
+    .host {
+        display: flex;
+        align-items: center;
+
+        .hostname {
             display: flex;
+            flex-direction: column;
+            justify-content: center;
 
-            .hostname {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-
-                p {
-                    font-size: 18px;
-                    font-weight: 500;
-                    color: $color-red;
-                    margin: 0 10px;
-                    text-align: right;
-                }
+            p {
+                font-size: 18px;
+                font-weight: 500;
+                color: $color-red;
+                margin: 0 10px;
+                text-align: right;
             }
+        }
 
-
-
-            img {
-                height: 64px;
-                border-radius: 100%;
-            }
+        img {
+            height: 64px;
+            border-radius: 100%;
         }
     }
 
@@ -84,6 +83,8 @@ $color-red: #FF6060;
                 margin: 0 4px;
             }
         }
+
+        .host {}
     }
 
     .LogementCollapses {
@@ -92,6 +93,90 @@ $color-red: #FF6060;
 
         .Collapse {
             width: 47.5%;
+        }
+    }
+}
+
+@media (min-width: 481px) {
+    .stars {
+        .host {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .Logement {
+
+        .Slideshow {
+            height: 255px;
+        }
+
+        .Info1 {
+
+            .titleID {
+
+                h1 {
+                    font-size: 18px;
+                }
+
+                p {
+                    font-size: 14px;
+                }
+            }
+
+            .host {
+                display: none;
+            }
+        }
+
+        .InfoTag {
+            flex-direction: column;
+            gap: 24px;
+            align-items: flex-start;
+
+            .tags ul {
+
+                li {
+                    width: 84px;
+                    font-size: 10px;
+                }
+            }
+
+            .stars {
+                display: flex;
+                align-items: center;
+
+                img {
+                    width: 18px;
+                }
+
+                .host {
+                    display: flex;
+                    position: absolute;
+                    right: 20px;
+
+                    .hostname {
+
+                        p {
+                            font-size: 12px;
+                        }
+                    }
+
+                    img {
+                        height: 32px;
+                        width: 32px;
+                    }
+                }
+            }
+        }
+
+        .LogementCollapses {
+            flex-direction: column;
+
+            .Collapse {
+                width: 100%;
+            }
         }
     }
 }
