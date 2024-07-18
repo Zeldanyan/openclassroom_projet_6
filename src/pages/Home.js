@@ -6,8 +6,9 @@ import Card from '../components/Card';
 import Banner from '../components/Banner';
 
 const Home = () => {
-
+    const mobile = window.matchMedia('(max-width: 480px)').matches;
     const [data, setData] = useState([]);
+
     useEffect(() => {
         fetch('/logements.json')
             .then(response => response.json())
@@ -19,7 +20,7 @@ const Home = () => {
         <div>
             <Header />
             <main className='Home'>
-                <Banner img={require('./../images/sectionHome.png')} text={"Chez vous, partout et ailleurs"} opacity={0.6} />
+                <Banner img={require('./../images/sectionHome.png')} text={mobile ? "Chez vous,\npartout et ailleurs" : "Chez vous, partout et ailleurs"} opacity={0.6} />
                 <div className='Gallery'>
                     {data.map((loge) => (
                         <Card key={loge.id} loge={loge} />

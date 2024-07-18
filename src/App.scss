@@ -10,5 +10,16 @@ a {
 }
 
 Main {
-    margin: 0 5% 50px 5%;
+    margin: 0 7% 50px 7%;
+}
+
+@media (max-width: 480px) {
+
+    body {
+        font-size: 12px;
+    }
+
+    Main {
+        margin: 20px;
+    }
 }

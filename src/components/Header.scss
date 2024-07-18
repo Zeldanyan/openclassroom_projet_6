@@ -1,17 +1,18 @@
 header {
-    margin: 50px 5% 50px 5%;
+    margin: 50px 7% 50px 7%;
     display: inline-flex;
     justify-content: space-between;
-    width: 90%;
+    width: 86%;
 }
 
 .NavBanner ul {
     display: inline-flex;
     list-style-type: none;
+    padding: 0;
+    gap: 50px;
 }
 
 .NavBanner ul li {
-    margin-left: 50px;
     cursor: pointer;
     font-weight: 500;
     text-align: right;
@@ -19,4 +20,18 @@ header {
 
 .NavBanner .NavActive {
     text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+    header {
+        margin: 20px 7% 0 7%;
+    }
+
+    img {
+        width: 145px;
+    }
+
+    .NavBanner ul {
+        gap: 25px;
+    }
 }

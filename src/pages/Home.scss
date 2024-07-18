@@ -5,3 +5,13 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
+
+@media (max-width: 480px) {
+    .Home .Gallery {
+        background-color: white;
+        flex-direction: column;
+        align-content: center;
+        justify-content: none;
+        margin: 10px 0;
+    }
+}

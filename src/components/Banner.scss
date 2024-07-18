@@ -1,6 +1,4 @@
 .Banner {
-    // background-image: url("");
-    // background-color: rgba(0, 0, 0, 0.6);
     background-blend-mode: darken;
     background-size: cover;
     background-repeat: no-repeat;
@@ -21,4 +19,22 @@
         font-weight: 700;
         font-size: 48px;
     }
+}
+
+@media (max-width: 480px) {
+
+    .Banner {
+        height: 111px;
+        justify-content: left;
+        margin: 0;
+        border-radius: 10px;
+
+        h1 {
+            padding: 0;
+            font-size: 24px;
+            text-align: left;
+            margin-left: 16px;
+        }
+    }
+
 }
