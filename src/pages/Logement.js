@@ -14,7 +14,7 @@ const Logement = () => {
     const [dataID, setDataID] = useState([]);
 
     useEffect(() => { //database logement
-        fetch('/logements.json')
+        fetch(`${process.env.PUBLIC_URL}/logements.json`)
             .then(response => response.json())
             .then(res => setDataID(res.find(nyan => nyan.id === id)))
             .catch(error => console.error('Error data:', error));

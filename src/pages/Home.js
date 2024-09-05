@@ -12,7 +12,7 @@ const Home = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => { // database des logements
-        fetch('/logements.json')
+        fetch(`${process.env.PUBLIC_URL}/logements.json`)
             .then(response => response.json())
             .then(res => setData(res))
             .catch(error => console.error('Error data:', error));
