@@ -11,6 +11,7 @@ function App() {
     <Router>
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/openclassroom_projet_6' element={<Home />} />
         <Route path='*' element={<Error404 />} />
         <Route path='/about' element={<About />} />
         <Route path='/logement/:id' element={<Logement />} />
