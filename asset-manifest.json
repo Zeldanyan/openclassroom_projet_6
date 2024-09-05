@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/openclassroom_projet_6/static/css/main.6c7aee69.css",
-    "main.js": "/openclassroom_projet_6/static/js/main.11c2929b.js",
+    "main.js": "/openclassroom_projet_6/static/js/main.facff41a.js",
     "static/js/453.d57453d8.chunk.js": "/openclassroom_projet_6/static/js/453.d57453d8.chunk.js",
     "static/media/sectionAbout.png": "/openclassroom_projet_6/static/media/sectionAbout.cf3bd552bacd5d6f280f.png",
     "static/media/sectionHome.png": "/openclassroom_projet_6/static/media/sectionHome.f4490b46bcc1f7aa8685.png",
@@ -15,11 +15,11 @@
     "static/media/arrow_prev.svg": "/openclassroom_projet_6/static/media/arrow_prev.d4c20a563c2cc3e68f6d1fd3679e0183.svg",
     "static/media/arrow_next.svg": "/openclassroom_projet_6/static/media/arrow_next.224e07798ade6bda6e2572adcd9fc9c3.svg",
     "main.6c7aee69.css.map": "/openclassroom_projet_6/static/css/main.6c7aee69.css.map",
-    "main.11c2929b.js.map": "/openclassroom_projet_6/static/js/main.11c2929b.js.map",
+    "main.facff41a.js.map": "/openclassroom_projet_6/static/js/main.facff41a.js.map",
     "453.d57453d8.chunk.js.map": "/openclassroom_projet_6/static/js/453.d57453d8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6c7aee69.css",
-    "static/js/main.11c2929b.js"
+    "static/js/main.facff41a.js"
   ]
 }
