@@ -5,11 +5,13 @@ import Footer from '../components/Footer';
 import Card from '../components/Card';
 import Banner from '../components/Banner';
 
+// home page
+
 const Home = () => {
-    const mobile = window.matchMedia('(max-width: 480px)').matches;
+    const mobile = window.matchMedia('(max-width: 480px)').matches; // if mobile variable
     const [data, setData] = useState([]);
 
-    useEffect(() => {
+    useEffect(() => { // database des logements
         fetch('/logements.json')
             .then(response => response.json())
             .then(res => setData(res))

@@ -2,7 +2,7 @@ import React from 'react';
 import './Card.scss';
 import { Link } from 'react-router-dom';
 
-const Card = ({ loge }) => {
+const Card = ({ loge }) => { //loge = database donnée du logement
     return (
         <figure className='card'>
             <Link to={`/logement/${loge.id}`}>

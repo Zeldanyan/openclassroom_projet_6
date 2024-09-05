@@ -2,13 +2,16 @@ import React from 'react';
 import './Banner.scss';
 
 const Banner = (props) => {
-    const text = props.text.split('\n');
+    // props.img = image
+    // props.opacity = opacity
+    // props.text = text
+    const text = props.text.split('\n'); // text par ligne
 
     return (
         <div className='Banner'
             style={{
                 backgroundImage: `url(${props.img})`,
-                backgroundColor: `rgba(0, 0, 0, ${props.opacity})`
+                backgroundColor: `rgba(0, 0, 0, ${props.opacity})` //pourcentage d'assombrisement
             }}>
             <h1>{text.map((line, index) => (
                 <React.Fragment key={index}>

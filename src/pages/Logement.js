@@ -13,7 +13,7 @@ const Logement = () => {
     const { id } = useParams();
     const [dataID, setDataID] = useState([]);
 
-    useEffect(() => {
+    useEffect(() => { //database logement
         fetch('/logements.json')
             .then(response => response.json())
             .then(res => setDataID(res.find(nyan => nyan.id === id)))

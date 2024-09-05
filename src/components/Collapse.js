@@ -4,9 +4,12 @@ import collClose from './../images/collClose.svg';
 import collOpen from './../images/collOpen.svg';
 
 const Collapse = (props) => {
+    //props.title = title
+    //props.text = text
+    //props.list = bool true if text is a list
     const [open, setOpen] = useState(false);
 
-    const toggle = () => {
+    const toggle = () => { //toggle open/close collapse
         setOpen(!open);
     };
 
