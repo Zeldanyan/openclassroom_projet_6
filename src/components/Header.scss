@@ -1,8 +1,10 @@
 header {
-    margin: 50px 7% 50px 7%;
-    display: inline-flex;
+    padding: 50px 7% 50px 7%;
+    margin: auto;
+    display: flex;
     justify-content: space-between;
     width: 86%;
+    max-width: 1240px;
 }
 
 .NavBanner ul {
@@ -24,6 +26,7 @@ header {
 
 @media (max-width: 480px) {
     header {
+        padding: 0;
         margin: 20px 7% 0 7%;
     }
 

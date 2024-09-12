@@ -10,7 +10,9 @@ a {
 }
 
 Main {
-    margin: 0 7% 50px 7%;
+    padding: 0 7% 50px 7%;
+    max-width: 1240px;
+    margin: auto;
 }
 
 @media (max-width: 480px) {
@@ -21,5 +23,6 @@ Main {
 
     Main {
         margin: 20px;
+        padding: 0;
     }
 }

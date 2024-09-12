@@ -2,6 +2,7 @@ $color-red: #FF6060;
 
 .Collapse {
     margin: 0 0 40px 0;
+    background-color: #FBFBFB;
 
     .title {
         border-radius: 5px;
@@ -9,6 +10,7 @@ $color-red: #FF6060;
         color: white;
         display: flex;
         justify-content: space-between;
+        z-index: 2;
 
         p {
             font-weight: 700;
@@ -19,9 +21,17 @@ $color-red: #FF6060;
         }
 
         img {
-            padding: 0 24px 0 0;
+            //padding: 0 24px 0 0;
+            margin-right: 24px;
             cursor: pointer;
             width: 24px;
+            transform: rotate(0deg);
+            transition: transform 0.4s ease;
+            transform-origin: center;
+
+            &.rotate {
+                transform: rotate(-180deg);
+            }
         }
     }
 
@@ -29,6 +39,23 @@ $color-red: #FF6060;
         margin: 20px;
         font-weight: 400;
         font-size: 18px;
+        transition: transform 0.3s ease, opacity 0.3s ease, max-height 0.3s ease, margin 0.2s ease;
+        overflow: hidden;
+        z-index: 0;
+
+        &.open {
+            transform: translate(0, 0%);
+            opacity: 1;
+            max-height: 100px;
+        }
+
+        &.close {
+            transform: translate(0, -100%);
+            opacity: 0;
+            max-height: 0;
+            //display: none;
+            margin: 0;
+        }
 
         p {
             margin: 0;
@@ -48,7 +75,8 @@ $color-red: #FF6060;
             }
 
             img {
-                padding: 0 12px 0 0;
+                margin-right: 12px;
+                //padding: 0 12px 0 0;
                 width: 16px;
             }
         }
@@ -56,6 +84,10 @@ $color-red: #FF6060;
         .text {
             font-size: 12px;
             margin: 10px 30px 30px 30px;
+
+            &.open {}
+
+            &.close {}
 
             p {
                 margin: 0;

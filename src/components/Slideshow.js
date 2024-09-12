@@ -3,16 +3,18 @@ import './Slideshow.scss';
 import aprev from './../images/arrow_prev.svg';
 import anext from './../images/arrow_next.svg';
 
-const Slideshow = ({ IMGs }) => {
+// navigation d'image
+
+const Slideshow = ({ IMGs }) => { // IMGs = tableau des images
     const [index, setIndex] = useState(0)
 
-    const prev = () => {
+    const prev = () => { //image precedente
         if (index === 0) {
             setIndex(IMGs.length - 1)
         } else setIndex(index - 1)
     }
 
-    const next = () => {
+    const next = () => { // image suivante
         if (index === IMGs.length - 1) {
             setIndex(0)
         } else setIndex(index + 1)
@@ -21,9 +23,9 @@ const Slideshow = ({ IMGs }) => {
     return (
         <div className='Slideshow'>
             <img src={IMGs[index]} alt="" className="pictures" />
-            <img src={aprev} alt="" className="prev" onClick={prev} />
-            <img src={anext} alt="" className="next" onClick={next} />
-            <div className="counter">
+            <img src={aprev} alt="" className="prev" onClick={prev} style={{ display: IMGs.length <= 1 ? 'none' : 'block' }} />
+            <img src={anext} alt="" className="next" onClick={next} style={{ display: IMGs.length <= 1 ? 'none' : 'block' }} />
+            <div className="counter" style={{ display: IMGs.length <= 1 ? 'none' : 'block' }}>
                 {`${index + 1}/${IMGs.length}`}
             </div>
         </div>
